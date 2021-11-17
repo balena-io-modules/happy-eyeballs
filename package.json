@@ -1,0 +1,38 @@
+{
+  "name": "@balena/happy-eyeballs",
+  "description": "patches http(s).Agent to implement happy eyeballs 2 (rfc8305), a standard published by the IETF",
+  "main": "build/src/index.js",
+  "scripts": {
+    "test": "node -r ts-node/register ./test/cli.ts",
+    "debug": "NODE_DEBUG=@balena/happy-eyeballs-debug npm test",
+    "verbose": "NODE_DEBUG=@balena/eye-patch,@balena/happy-eyeballs-debug npm test",
+    "lint": "balena-lint --typescript src test",
+    "build": "./node_modules/.bin/tsc"
+  },
+  "repository": "https://github.com/balena-io-modules/happy-eyeballs",
+  "keywords": [],
+  "author": "Zane Hitchcox <zane@balena.io>",
+  "contributors": [
+    "Miguel Casquiera <miguel@balena.io>"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "@types/busboy": "^0.2.4",
+    "@types/chalk": "^2.2.0",
+    "@types/expect": "^24.3.0",
+    "@types/node": "^16.10.1",
+    "@types/node-fetch": "^2.5.12",
+    "@types/request": "^2.48.7",
+    "busboy": "^0.3.1",
+    "chalk": "^4.1.2",
+    "expect": "^27.2.2",
+    "node-fetch": "^2.6.5",
+    "request": "^2.88.2",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
+  },
+  "dependencies": {
+    "abort-controller": "^3.0.0",
+    "tslib": "^2.3.1"
+  }
+}
