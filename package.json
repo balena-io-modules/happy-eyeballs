@@ -2,6 +2,7 @@
   "name": "@balena/happy-eyeballs",
   "description": "patches http(s).Agent to implement happy eyeballs 2 (rfc8305), a standard published by the IETF",
   "main": "build/src/index.js",
+  "version": "0.0.0",
   "scripts": {
     "test": "node -r ts-node/register ./test/cli.ts",
     "debug": "NODE_DEBUG=@balena/happy-eyeballs-debug npm test",
