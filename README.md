@@ -1,4 +1,4 @@
-## @balena-io/eye-patch
+## @balena-io/happy-eyeballs
 
 This package patches NodeJS's `http(s).Agent` to implement the IETF standard, "Happy Eyeballs 2" ([rfc8305](https://datatracker.ietf.org/doc/html/rfc8305)).
 
