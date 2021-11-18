@@ -31,7 +31,7 @@ async function cli() {
 	}
 
 	await Promise.all(files.map(file => import(file)));
-	await run();
+	const result = await run();
 
 	if (process.argv.includes('-w')) {
 		(async () => {
@@ -46,6 +46,8 @@ async function cli() {
 				});
 			}
 		})();
+	} else {
+		process.exit(result ?? 1);
 	}
 }
 
