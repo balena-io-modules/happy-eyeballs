@@ -89,10 +89,8 @@ test('fail with all incorrect addresses', async () => {
     })
     throw new Error('Request should not succeed with incorrect addresses.');
   } catch (err: any) {
-    if (!err.message.includes('timed out')) {
-      console.log(err.message)
-    }
-    expect(err.message.includes('timed out')).toBe(true);
+    // maybe on ipv4 only network
+    expect(err.message.includes('timed out') || err.message.includes('ENETUNREACH')).toBe(true);
   }
 })
 
