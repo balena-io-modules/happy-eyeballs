@@ -84,6 +84,7 @@ export const run =
 			const hasOnlys = tests.some(test => test.only);
 			const batch = tests.slice();
 			tests.length = 0;
+			let failed = 0;
 			const runTestWithResults = async (test: TestData) => {
 				const {depth:_depth, name, fn, skip, parallel, only, always} = test;
 				const indent = ' '.repeat(_depth);
@@ -96,6 +97,7 @@ export const run =
 					await fn();
 					console.log(indent + chalk.green('✓'), name);
 				} catch (error: any) {
+					failed++;
 					console.error(indent + chalk.red('☓'), name);
 					console.error(chalk.red(error));
 					console.error(error?.stack);
@@ -110,6 +112,7 @@ export const run =
 					await runTestWithResults(test);
 				}
 			}
+			return failed;
 
 		})) ||
 	noop;
