@@ -1,6 +1,6 @@
 ## @balena-io/eye-patch
 
-This package patches `http(s).Agent` to implement "happy eyeballs 2" ([rfc8305](https://datatracker.ietf.org/doc/html/rfc8305)), a standard published by the IETF.
+This package patches NodeJS's `http(s).Agent` to implement the IETF standard, "Happy Eyeballs 2" ([rfc8305](https://datatracker.ietf.org/doc/html/rfc8305)).
 
 It improves client performance and reliability by trying concurrently trying multiple ip addresses for a given host name. See [Explanation](#explanation) for more detail.
 
