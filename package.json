@@ -4,7 +4,7 @@
   "main": "build/src/index.js",
   "version": "0.0.3",
   "scripts": {
-    "test": "node -r ts-node/register ./test/cli.ts",
+    "test": "npm run build && node -r ts-node/register ./test/cli.ts",
     "debug": "NODE_DEBUG=@balena/happy-eyeballs-debug npm test",
     "verbose": "NODE_DEBUG=@balena/eye-patch,@balena/happy-eyeballs-debug npm test",
     "lint": "balena-lint --typescript src test",
