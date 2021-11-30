@@ -1,2 +1,2 @@
-const patch = require('./build/src/patch.js');
+const patch = require('./build/patch');
 patch.patch();
