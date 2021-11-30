@@ -2,7 +2,7 @@
   "name": "@balena/happy-eyeballs",
   "description": "patches http(s).Agent to implement happy eyeballs 2 (rfc8305), a standard published by the IETF",
   "main": "build/index.js",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "scripts": {
     "clean": "rimraf ./build",
     "test": "npm run build && node -r ts-node/register ./test/cli.ts",
@@ -57,6 +57,6 @@
     "tslib": "^2.3.1"
   },
   "versionist": {
-    "publishedAt": "2021-11-25T19:50:41.229Z"
+    "publishedAt": "2021-11-30T15:08:39.369Z"
   }
 }
