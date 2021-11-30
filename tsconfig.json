@@ -12,7 +12,7 @@
     "downlevelIteration": true,
     "declaration": true,
     "sourceMap": true,
-    "importHelpers": true,
+    "importHelpers": true
   },
-  "include": ["./src/*.ts", "./test/*.ts"],
+  "include": ["./src/*.ts", "./test/*.ts"]
 }
